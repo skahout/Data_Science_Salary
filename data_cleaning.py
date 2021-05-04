@@ -85,7 +85,6 @@ df['comp_count']
 df.to_csv('salary_data_cleaned.csv', index = False)
 
 
-
     
 
 
