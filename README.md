@@ -42,7 +42,7 @@ Cleaned the data to prepare for EDA by making the following changes and variable
 * Tableau<br />
 
 ## EDA<br />
-* Profiled data using Pandas Profiling and visualized for a clear outline of data distribution.
+* Profiled data using Pandas Profiling and visualized for a clear outline of data distribution. (filename : output.html)
 * Added sections for job seniority to better differentiate between characteristics
 * Following are some of the highlights of the process
 
