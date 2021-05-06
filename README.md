@@ -7,5 +7,36 @@
 #Resources
 **Python Version:** 3.7
 **Packages:** pandas, numpy, sklearn, matplotlib, seaborn
-**For Web Framework Requirements:** pip install -r requirements.txt
 
+#Data Set Features Initial
+*Job title
+*Salary Estimate
+*Job Description
+*Rating
+*Company Name
+*Location
+*Company Headquarters
+*Size of Company
+*Founded Date
+*Type of Ownership
+*Industry
+*Sector
+*Revenue
+*Competitors
+
+#Data Cleaning
+Cleaned the data to prepare for EDA by making the following changes and variable creation:
+
+*Parsed Salary for numeric data
+*Differentiated between hourly wages and employer provided salary
+*Omitted missing salary data
+*Parsed company text to extract Ratings
+*Calculated age of company from the Founded column
+*Length of job description
+*Parsed company description to extract and categorize data based on the following skill sets:
+*Python
+*R
+*Spark
+*AWS
+*Excel
+*Tableau
