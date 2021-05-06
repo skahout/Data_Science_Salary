@@ -46,4 +46,7 @@ Cleaned the data to prepare for EDA by making the following changes and variable
 * Added sections for job seniority to better differentiate between characteristics
 * Following are some of the highlights of the process
 
-* 
+## Model Building
+* lasso: Because there is a normalization effect and we have a sparse matrix
+* Rf: Because we have a lot of 0 and 1 values and that is a good use case because we are using a bunch of decision trees
+
