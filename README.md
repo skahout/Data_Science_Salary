@@ -47,8 +47,8 @@ Cleaned the data to prepare for EDA by making the following changes and variable
 * Following are some of the highlights of the process
 
 ![alt text](https://github.com/skahout/ds_salary_proj/blob/main/png/boxlpots_comparison.PNG "Variations by Factors")
-![alt text](https://github.com/skahout/ds_salary_proj/blob/main/png/correlation_heatmap.PNG "Factor Correlation Heatmap")
 ![alt text](https://github.com/skahout/ds_salary_proj/blob/main/png/Job_Type.PNG "Count by Job Type")
+![alt text](https://github.com/skahout/ds_salary_proj/blob/main/png/correlation_heatmap.PNG "Factor Correlation Heatmap")
 ![alt text](https://github.com/skahout/ds_salary_proj/blob/main/png/Ownership_Section_Visuals.PNG "Histograms of Ownership and Sector")
 
 ## Model Building
