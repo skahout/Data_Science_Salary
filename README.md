@@ -46,10 +46,15 @@ Cleaned the data to prepare for EDA by making the following changes and variable
 * Added sections for job seniority to better differentiate between characteristics
 * Following are some of the highlights of the process
 
-![alt text](https://github.com/skahout/ds_salary_proj/blob/main/png/boxlpots_comparison.PNG "Variations by Factors")
-![alt text](https://github.com/skahout/ds_salary_proj/blob/main/png/Job_Type.PNG "Count by Job Type")
-![alt text](https://github.com/skahout/ds_salary_proj/blob/main/png/correlation_heatmap.PNG "Factor Correlation Heatmap")
-![alt text](https://github.com/skahout/ds_salary_proj/blob/main/png/Ownership_Section_Visuals.PNG "Histograms of Ownership and Sector")
+![alt text](https://github.com/skahout/ds_salary_proj/blob/main/png/avg_salary_hist.png "Average Salary Histogram")
+![alt text](https://github.com/skahout/ds_salary_proj/blob/main/png/factor_heatmap.png "Factor Correlation Heatmap")
+![alt text](https://github.com/skahout/ds_salary_proj/blob/main/png/factor_variations_boxplot.png "Factor Variation Boxplot")
+![alt text](https://github.com/skahout/ds_salary_proj/blob/main/png/rating_boxplot.png "Ratings Boxplot")
+![alt text](https://github.com/skahout/ds_salary_proj/blob/main/png/job_type_hist.png "Histogram of Job Type")
+![alt text](https://github.com/skahout/ds_salary_proj/blob/main/png/job_state_hist.png "Histogram of Job State")
+![alt text](https://github.com/skahout/ds_salary_proj/blob/main/png/ownership_hist.png "Histogram of Ownership")
+![alt text](https://github.com/skahout/ds_salary_proj/blob/main/png/section_hist.png "Histogram of Sector")
+
 
 ## Model Building
 * lasso: Because there is a normalization effect and we have a sparse matrix
