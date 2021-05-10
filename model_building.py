@@ -51,9 +51,10 @@ type(X_train)
 # Decision Trees Regression
 from sklearn.tree import DecisionTreeRegressor
 lmt = DecisionTreeRegressor()
+lmt.fit(X_train,y_train)
 
 np.mean(cross_val_score(lmt,X_train,y_train, scoring = 'neg_mean_absolute_error', cv = 4))
-# $14.7k 
+# $15.5k $ off
 
 
 # lasso regression
@@ -62,9 +63,10 @@ from sklearn.linear_model import Lasso
 lm_l = Lasso(alpha=.03)
 lm_l.fit(X_train,y_train)
 np.mean(cross_val_score(lm_l, X_train, y_train, scoring = 'neg_mean_absolute_error', cv=4))
-# Gives 21.2k Dollars off so a little bit worse.
+# Gives 19.2k Dollars off so a little bit worse.
 #Increasing Alpha values on lasso regression
 
+#Below code is to generate the best alpha value for Alpha
 alpha = []
 error = []
 
@@ -100,27 +102,37 @@ np.mean(cross_val_score(rf,X_train,y_train, scoring = 'neg_mean_absolute_error',
 
 from sklearn.model_selection import GridSearchCV
 # tune models using GridsearchCV
-parameters = {'n_estimators':range(10,300,10), 'criterion':('mse','mae'), 'max_features':('auto','sqrt','log2')}
-gs = GridSearchCV(rf, parameters, scoring = 'neg_mean_absolute_error', cv = 4)
+parameters_rf = {'n_estimators':range(10,300,10), 'criterion':('mse','mae'), 'max_features':('auto','sqrt','log2')} #parameters for Random Forest
+parameters_lmt = {'criterion':('mse','mae'), 'max_features':('auto','sqrt','log2')} #parameters for Decision Tree
+gs_rf = GridSearchCV(rf, parameters_rf, scoring = 'neg_mean_absolute_error', cv = 4)
+gs_lmt = GridSearchCV(lmt, parameters_lmt, scoring = 'neg_mean_absolute_error', cv = 4)
+
 
 #Takes a lot of time
-gs.fit(X_train, y_train)
+gs_rf.fit(X_train, y_train)
+gs_lmt.fit(X_train, y_train)
  
-gs.best_score_
-gs.best_estimator_
+gs_rf.best_score_
+gs_rf.best_estimator_
+
+gs_lmt.best_score_
+gs_lmt.best_estimator_
 
 # test ensembles
 tpred_lm = lm.predict(X_test) #linear Regression
 tpred_lmt = lmt.predict(X_test) # Decision Tree
+tpred_lmt1 = gs_lmt.best_estimator_.predict(X_test) #Decision Tree Tuned
 tpred_lml = lm_l.predict(X_test) # lasso Regression
 tpred_SVR = regr.predict(X_test) # SVR Regression
-tpred_rf = gs.best_estimator_.predict(X_test) # Random Forest
+tpred_rf = gs.best_estimator_.predict(X_test) # Random Forest Tuned
 
 from sklearn.metrics import mean_absolute_error
 mean_absolute_error(y_test,tpred_lm) #18.8k
 mean_absolute_error(y_test,tpred_lmt) #9.9k
+mean_absolute_error(y_test, tpred_lmt1) #11.2k
 mean_absolute_error(y_test,tpred_lml) #19k
 mean_absolute_error(y_test,tpred_rf) #12k
 mean_absolute_error(y_test,tpred_SVR) #29k
 
-mean_absolute_error(y_test,(tpred_lm+tpred_rf)/2) #14.326232442246416
+#Ensemble of Decision Tree and its opimization gives the best result although unsure if this is the correct approach
+mean_absolute_error(y_test,(tpred_lmt+tpred_lmt1)/2) #8.8k
