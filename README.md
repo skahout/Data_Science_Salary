@@ -2,7 +2,7 @@
 * Created a tool that estimates data science salaries (MAE ~ $ 9.9K) to give a general overview of what to expect coming into data science and for new hires to negotiate their income.<br />
 * Cleaned data worth approximately 1000 entries extracted from glassdoor regarding data science jobs.<br />
 * Engineered features from the text of each job description to quantify the value companies put on Python, R, Spark, AWS, Excel, Tableau.<br />
-* Used GridsearchCV to optimize MLR, Lasso and Random Forest Regressor to reach the best model<br />
+* Used GridsearchCV to optimize Linear, MLR, Lasso, Decision Tree and Random Forest Regressor to reach the best model<br />
 
 ## Resources<br />
 **Python Version:** 3.7<br />
