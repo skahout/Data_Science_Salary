@@ -60,13 +60,12 @@ Cleaned the data to prepare for EDA by making the following changes and variable
 ## Model Building
 * lasso: Because there is a normalization effect and we have a sparse matrix
 * Rf: Because we have a lot of 0 and 1 values and that is a good use case because we are using a bunch of decision trees
-* In Addition performed Decision Tree, Soft Vector & Voting Classifier
-* The Random Forest outperformed.
+* In Addition performed Linear Regression, Decision Tree, Support Vector Regression
 
 ## Model Perfomance
-Following are the Mean Absolute Error values by their respective models
-* Lasso Regression :
-* Random Forest :
-* Decision Tree :
-* Support Vector Classifier :
-* Soft Voting Classifier : 
+Both the Decision Tree and Random Forest gave the best and approximately same results on the test set, however Decision Tree outperformed the other models during validaiton. Following are the Mean Absolute Error values by their respective models.
+* Linear Regression : 18.8k
+* Random Forest : 12k
+* Decision Tree : 9.9k
+* Lasso Regression : 19k
+* Support Vector Regression : 29k
