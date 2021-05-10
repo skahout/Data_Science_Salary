@@ -8,7 +8,7 @@
 **Python Version:** 3.7<br />
 **Packages:** pandas, numpy, sklearn, matplotlib, seaborn<br />
 
-## Data Set Features Initial<br />
+## Data Set Features (Initial)<br />
 * Job title<br />
 * Salary Estimate<br />
 * Job Description<br />
