@@ -1,5 +1,5 @@
 # Salary Estimator for Data Science Jobs in America<br />
-* Created a tool that estimates data science salaries (MAE ~ $ 12K) to give a general overview of what to expect coming into data science and for new hires to negotiate their income.<br />
+* Created a tool that estimates data science salaries (MAE ~ $ 9.9K) to give a general overview of what to expect coming into data science and for new hires to negotiate their income.<br />
 * Cleaned data worth approximately 1000 entries extracted from glassdoor regarding data science jobs.<br />
 * Engineered features from the text of each job description to quantify the value companies put on Python, R, Spark, AWS, Excel, Tableau.<br />
 * Used GridsearchCV to optimize MLR, Lasso and Random Forest Regressor to reach the best model<br />
@@ -26,7 +26,6 @@
 
 ## Data Cleaning<br />
 Cleaned the data to prepare for EDA by making the following changes and variable creation:<br />
-
 * Parsed Salary for numeric data<br />
 * Differentiated between hourly wages and employer provided salary<br />
 * Omitted missing salary data<br />
@@ -62,7 +61,7 @@ Cleaned the data to prepare for EDA by making the following changes and variable
 * Rf: Because we have a lot of 0 and 1 values and that is a good use case because we are using a bunch of decision trees
 * In Addition performed Linear Regression, Decision Tree, Support Vector Regression
 
-## Model Perfomance
+## Model Performance
 Both the Decision Tree and Random Forest gave the best and approximately same results on the test set, however Decision Tree outperformed the other models during validaiton. Following are the Mean Absolute Error values by their respective models.
 * Linear Regression : 18.8k
 * Random Forest : 12k
