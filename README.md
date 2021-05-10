@@ -55,7 +55,7 @@ Cleaned the data to prepare for EDA by making the following changes and variable
 ![alt text](https://github.com/skahout/ds_salary_proj/blob/main/png/ownership_hist.png "Histogram of Ownership")
 ![alt text](https://github.com/skahout/ds_salary_proj/blob/main/png/section_hist.png "Histogram of Section")
 ![alt text](https://github.com/skahout/ds_salary_proj/blob/main/png/worcloud.png "Data Science Word Cloud")
-![alt text](https://github.com/skahout/ds_salary_proj/blob/main/png/Pearson's%20r%20correlation.PNG "Pearson's r Heatmap")
+![alt text](https://github.com/skahout/ds_salary_proj/blob/main/png/pearson_r_correlation.PNG "Pearson's r Heatmap")
 
 
 ## Model Building
