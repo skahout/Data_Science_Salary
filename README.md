@@ -1,12 +1,13 @@
 # Salary Estimator for Data Science Jobs<br />
-* Created a tool that estimates data science salaries (MAE ~ $ 9.9K) to give a general overview of what to expect coming into data science and for new hires to negotiate their income.<br />
+* Created a tool that estimates data science salaries (MAE ~ $ 1.32K) to give a general overview of what to expect coming into data science and for new hires to negotiate their income.<br />
 * Cleaned data worth approximately 1000 entries extracted from glassdoor regarding data science jobs.<br />
 * Engineered features from the text of each job description to quantify the value companies put on Python, R, Spark, AWS, Excel, Tableau.<br />
 * Used GridsearchCV to optimize Decision Tree and Random Forest Regressor to reach the best model<br />
+* Built an artificial neural network to compare results with optimized regression models.
 
 ## Resources<br />
 **Python Version:** 3.7<br />
-**Packages:** pandas, numpy, sklearn, matplotlib, seaborn<br />
+**Packages:** pandas, numpy, sklearn, tensorflow, matplotlib, seaborn<br />
 
 ## Data Set Features (Initial)<br />
 * Job title<br />
@@ -60,6 +61,7 @@ Cleaned the data to prepare for EDA by making the following changes and variable
 * Lasso: Because there is a normalization effect and we have a sparse matrix
 * Random Forest: Because we have a lot of 0 and 1 values and that is a good use case because we are using a bunch of decision trees
 * In Addition performed Linear Regression, Decision Tree, Support Vector Regression
+* Artificial Neural Network: To compare with the previous models.
 
 ## Model Performance
 Both the Decision Tree and Random Forest gave the best and approximately same results on the test set, however Decision Tree outperformed the other models during validaiton. Following are the Mean Absolute Error values by their respective models.
@@ -68,3 +70,4 @@ Both the Decision Tree and Random Forest gave the best and approximately same re
 * Decision Tree : 9.9k
 * Lasso Regression : 19k
 * Support Vector Regression : 29k
+* Artificial Neural Network: 1.32k
