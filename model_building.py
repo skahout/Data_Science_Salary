@@ -134,5 +134,44 @@ mean_absolute_error(y_test,tpred_lml) #19k
 mean_absolute_error(y_test,tpred_rf) #12k
 mean_absolute_error(y_test,tpred_SVR) #29k
 
-#Ensemble of Decision Tree and its opimization gives the best result although unsure if this is the correct approach
+# Ensemble of Decision Tree and its opimization gives the best result although unsure if this is the correct approach
 mean_absolute_error(y_test,(tpred_lmt+tpred_lmt1)/2) #8.8k
+
+# Building Artificial Neural Network
+import tensorflow as tf
+# train test split
+from sklearn.model_selection import train_test_split
+X = df_dum.drop('avg_salary', axis = 1)
+y = df_dum.avg_salary.values #.values creates array instead of a series
+
+train = X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+
+#Feature Scaling
+from sklearn.preprocessing import StandardScaler
+sc = StandardScaler()
+X_train = sc.fit_transform(X_train)
+X_test = sc.transform(X_test)
+
+#buidling ann
+ann = tf.keras.models.Sequential()
+
+#adding first hidden layer
+ann.add(tf.keras.layers.Dense(units=10, activation='relu'))
+
+#adding second hidden layer
+ann.add(tf.keras.layers.Dense(units=10, activation='relu'))
+
+#adding output layer
+ann.add(tf.keras.layers.Dense(units=1))
+
+ann.compile(optimizer = 'adam', loss = 'mean_absolute_error')
+
+ann.fit(X_train, y_train, batch_size = 32, epochs = 1500)
+# Less than $1.5k off of the actual avg_salary which is substantially better than the values produced by previous models
+
+y_pred = ann.predict(X_test)
+np.set_printoptions(precision=2)
+print(np.concatenate((y_pred.reshape(len(y_pred),1), y_test.reshape(len(y_test),1)),1))
+
+np.mean(y_pred)
+np.mean(y_test)
