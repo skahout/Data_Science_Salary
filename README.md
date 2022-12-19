@@ -1,3 +1,7 @@
+# This project is a step by step imitation of Ken Jee project for learning purposes<br />
+# Ken's GitHub to the actual project is: https://github.com/PlayingNumbers/ds_salary_proj<br />
+# Ken's youtube link to this project is: https://youtu.be/MpF9HENQjDo<br />
+
 # Salary Estimator for Data Science Jobs<br />
 * Created a tool that estimates data science salaries (MAE ~ $ 1.32K) to give a general overview of what to expect coming into data science and for new hires to negotiate their income.<br />
 * Cleaned data worth approximately 1000 entries extracted from glassdoor regarding data science jobs.<br />
